@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW GAME</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/panel.css" rel="stylesheet">
+    <link href="css/radar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--<link href="css/radar.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <div id="alertDiv">SYSTEM ONLINE</div>
+    <div id="state"></div>
+    <div id=heading style="margin-left: 0"></div>
+    <div id="mainContainer">
+        <div class="grid" id="gridContainer"></div>
+
+        <div id="rightPanel">
+            <div id="date"
+                style="font-size: 12px; text-align: center; margin-bottom: -20px; padding: 10px; border-bottom: 2px solid #646166; margin-bottom: 10px; ">
+            </div>
+            <div id="feed">
+                <p style="margin: 0; padding-bottom: 3px; font-size: 12px;">LIVE FEED</p>
+                <div class="light-container">
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                </div>
+                <div id="liveFeed"></div>
+                <p class="newFeed"></p>
+            </div>
+        </div>
+        <div id="rightPanel2">
+            <div class="body" style="padding: 15%; margin-bottom: 30%;">
+                <div class="block-section">
+                    <ul class="block-links">
+                        <li class="dark-blue animate-pulse" style="margin-bottom: 10px;">
+                            <div draggable="true">GUN</div>
+                        </li>
+                        <li>
+                            <div draggable="true"></i>AIR</div>
+                        </li>
+                        <li>
+                            <div draggable="true">SUB</div>
+                        </li>
+
+                        <li>
+                            <div draggable="true">RDR</div>
+                        </li>
+                        <li>
+                            <div draggable="true">TST</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="rightPanel2">
+            <div class="body" style="padding: 15%; margin-bottom: 30%;">
+                <div class="block-section">
+                    <ul class="block-links">
+                        <li class="dark-blue animate-pulse" style="margin-bottom: 10px;">
+                            <div draggable="true">GUN</div>
+                        </li>
+                        <li>
+                            <div draggable="true"></i>AIR</div>
+                        </li>
+                        <li>
+                            <div draggable="true">SUB</div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div draggable="true">RDR</div>
+                        </li>
+                        <li>
+                            <div draggable="true">TST</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div id="bottomPanel"></div>
+    <div id="bottomNav"></div>
+    <div id="bottomNav">
+        <button style="display: none;" id="resetGame">Reset</button>
+    </div>
+
+    <script>
+        setInterval(() => {
+            const timestamp = Date.now(); // Example timestamp
+            const date = new Date(timestamp); // Create a Date object
+            const dateNow = date.toLocaleString();
+
+            // Render to HTML
+            const clock = document.getElementById('date');
+            clock.textContent = dateNow; // Update the content
+            //console.log(dateNow);
+        }, 1000);
+    </script>
+
+    <script type="module" src="/main.js"></script>
+
+    <!--<script type="module" src="modules/renderShipMonitor.js"></script>-->
+</body>
+
+</html>

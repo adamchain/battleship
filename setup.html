@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETUP</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/radar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="alertDiv" style="background-color: rgb(0, 0, 0); border-bottom: 2px solid #424242;">SET YOUR POSITIONS
+    </div>
+
+    <div id="mainContainer">
+        <div class="grid" id="gridContainer"></div>
+
+        <div id="rightPanel">
+            <div id="feed" style="display: none;">
+                <p>Activity Feed</p>
+                <div id="liveFeed"></div>
+                <p class="newFeed"></p>
+            </div>
+
+            <p>Your Positons</p>
+            <div style="display: flex; width: 100%; text-align: center;" id="newActivity"></div>
+        </div>
+
+
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="/main.js"></script>
+        <script>
+            //TESTING GAMEPLAY
+            const myShots = [];
+            const enemyPositions = ['A10', 'A1'];
+            const body = document.body;
+            const hitAlert = document.getElementById('hitAlert');
+            const square = '';
+
+            // Arrays to hold ship locations
+            const smallShipLocation = [];
+            const mediumShipLocation = [];
+            const largeShipLocation = [];
+            const allShipLocations = [];
+
+            //code 
+            const allShots = document.getElementById('arrayData');
+
+        </script>
+
+</body>
+
+</html>

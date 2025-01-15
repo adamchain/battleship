@@ -1,0 +1,301 @@
+/*
+HEX Codes REF
+main bg off black: 373d4d
+main btn green: 12bc22
+container border black: 030403
+panel border gray: 646166
+btn HIT orange: ffd3b2 border: b02231
+*/
+/* General Styles */
+body {
+    margin: 0;
+    width: 100vmax;
+    font-family: "Courier New", monospace;
+    background-color: #1e1e1e;
+    /* Dark background */
+    color: #00ff00;
+    background-image: url(../images/bodyBg.jpg);
+    /* Green text to mimic a terminal */
+}
+
+#alertDiv {
+    background-color: #ad0b0b;
+    /* Red alert */
+    color: white;
+    text-align: center;
+    padding: 7px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    width: auto;
+    z-index: 100;
+
+}
+
+#state {
+    background-color: #1e1e1e2e;
+    /* Red alert */
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    width: auto;
+    z-index: 100;
+    margin: -1px;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    height: 60vh;
+    /* Adjust height to account for alert and bottom panels */
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border: 2px solid #646166;
+}
+
+.square {
+    width: 80%;
+    height: 80%;
+    margin: 5px;
+    background-color: #12bc22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 1px #0e9f1d, 0 0 8px #0c7b17, 0 0 2px #07490e, 0 0 6px #034209;
+
+
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(15, 1fr);
+    /* Ensure it matches your JavaScript setup */
+    gap: 2px;
+    aspect-ratio: 1 / 1;
+    /* Keep the grid square */
+    width: 50%;
+    /* Make it responsive */
+    /* Same as width to maintain aspect ratio */
+    overflow: scroll;
+    margin: 3px;
+    padding: 5px;
+}
+
+/* Bottom Panel */
+#rightPanel {
+    width: 20%;
+    height: 95%;
+    margin: 3px;
+    padding: 3px;
+    overflow: scroll;
+    background-color: #1e1e1e;
+    border: 2px solid #646166;
+    border-radius: 10px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Replace 'your-image.jpg' with your image path */
+    background-image: url(../images/bg.png);
+    /* Replace with the map image path */
+    background-blend-mode: overlay;
+    background-size: cover;
+    /* Ensure the image covers the entire div */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+}
+
+#rightPanel2 {
+    width: 10%;
+    height: 90%;
+    margin: 3px;
+    padding: 5px;
+    overflow: scroll;
+    background-color: #1e1e1e;
+    border: 2px solid #646166;
+    border-radius: 10px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    /* Replace with the map image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.shipImg {
+    height: 30px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.weaponContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    /* Adjust height to account for alert and bottom panels */
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #646166;
+    height: 40px;
+    overflow: scroll;
+}
+
+
+#shipContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    /* Adjust height to account for alert and bottom panels */
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border: 2px solid #646166;
+}
+
+#renderBottomPlay {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Adjust height to account for alert and bottom panels */
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    padding: 5px;
+    border: 2px solid #646166;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.shipDiv {
+    height: 10%;
+    width: 35%;
+    margin: 2px;
+    background-color: #1e1e1e;
+    border: 2px dashed #00ff00;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.shipDivPlay {
+    height: 90%;
+    width: 25%;
+    margin: 2px;
+    padding: 2px;
+    background-color: #1e1e1e;
+    border: 1px solid #646166;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.addShipDiv {
+    padding: 5px;
+}
+
+.addShipButtons {
+    background-color: #0e961c;
+    border: 2px dashed #2a2a2a;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    width: 20%;
+}
+
+.addShipDropdown {
+    background-color: #2a2a2a;
+    border: 2px dashed #646166;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    width: 30%;
+}
+
+.shipStatusDiv {
+    padding: 0;
+    border: 0;
+}
+
+#radarScanner {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 0px solid #646166;
+    border-radius: 50%;
+    background-color: #2b2b2b3e;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(29, 29, 29, 0.6);
+}
+
+#scannerCircle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0px solid rgba(0, 255, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#scannerBeam {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(#12bc22 0deg, #0044ff1a 50deg, transparent 360deg);
+    border-radius: 50%;
+    animation: rotateBeam 2s linear infinite;
+}
+
+@keyframes rotateBeam {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
