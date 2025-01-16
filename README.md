@@ -1,6 +1,8 @@
 # Battleship Game
 *still very much in-progress
 
+<img width="1280" alt="battleship" src="https://github.com/user-attachments/assets/b3f6de49-63da-4e01-a340-6a97016786db" />
+
 Welcome to my first game, **Battleship**. This is a fun little project where you go head-to-head with the computer in the classic game of Battleship. The whole thing leans heavily on **state management** and **arrays** to keep everything running smoothly.
 
 ## What's Cool About It
