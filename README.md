@@ -1,9 +1,10 @@
+*IN-PROGRESS: player 2 (computer) algorithm directions, array states/ship sinking, in-game alerts & additional weapon choices. 
+
 # Battleship Game
-*still very much in-progress
 
 <img width="1280" alt="battleship" src="https://github.com/user-attachments/assets/b3f6de49-63da-4e01-a340-6a97016786db" />
 
-Welcome to my first game, **Battleship**. This is a fun little project where you go head-to-head with the computer in the classic game of Battleship. The whole thing leans heavily on **state management** and **arrays** to keep everything running smoothly.
+Welcome to my first game build, **Battleship**. This is a fun little project where you go head-to-head with the computer in the classic game of Battleship. The whole thing leans heavily on **state management** and **arrays** to keep everything running smoothly.
 
 ## What's Cool About It
 - **Play solo:** It's you vs. the computer in a turn-based battle of wits.
@@ -14,7 +15,7 @@ Welcome to my first game, **Battleship**. This is a fun little project where you
 ## How It Works
 1. **Setup Phase:**
    - You place your ships on a 10x10 grid.
-   - The computer does the same (don’t peek!).
+   - The computer does the same.
 
 2. **Game Phase:**
    - Take turns guessing grid coordinates to attack.
@@ -27,10 +28,10 @@ This game’s all about keeping track of stuff:
 - **Computer's Grid:** Same deal, but hidden from you.
 - **Game Progress:** Who’s up next? How many ships are left? Is it game over?
 
-Everything updates dynamically so it’s always up-to-date.
+Everything updates dynamically.
 
-## Arrays FTW
-Arrays make this game tick:
+## Arrays 
+Arrays make this game work:
 
 1. **The Grid:**
    - It’s a 10x10 2D array where each cell tracks what’s going on: empty, ship, hit, or miss.
@@ -81,15 +82,12 @@ Arrays make this game tick:
 3. Place your ships and get ready to sink the computer’s fleet!
 
 ## What’s Next?
-- Add multiplayer support so you can play with friends.
+- Add multiplayer support.
 - Let the computer have different difficulty levels.
-- Add cool animations for hits, misses, and sinking ships.
+- Add cool animations for hits, misses, sinking ships, etc.
 
 ## Want to Help?
 Contributions are awesome! Fork the repo, make a branch, and send in a pull request with your tweaks or new features.
 
-
 ---
-
-Alright, that’s it. Go sink some ships and have fun coding!
 
